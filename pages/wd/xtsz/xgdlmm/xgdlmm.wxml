@@ -1,0 +1,54 @@
+<!-- 修改登录密码 -->
+<import src="/common/component/toast/toast.wxml"/>
+<template is="toast" data="{{ ..._toast_ }}"/>
+<view class='page'>
+  <view class="weui-cells">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">原登录密码</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" type='password' id='0' maxlength='20' bindinput='handleInput' placeholder="请输入现有登录密码" />
+      </view>
+      <view class="weui-cell__ft" hidden='{{oldPwdInput}}'>
+        <icon type="warn" size="23" color="#E64340"></icon>
+      </view>
+    </view>
+
+  </view>
+  <view class="weui-cells">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">新登录密码</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" bindinput='handleInput' maxlength='20' type='password' id='1' placeholder="请输入新的登录密码" />
+      </view>
+      <view class="weui-cell__ft" hidden='{{newPwdInput}}'>
+        <icon type="warn" size="23" color="#E64340"></icon>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">密码确认</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" bindinput='handleInput' maxlength='20' type='password' id='2' placeholder="请再次输入新的登录密码" />
+      </view>
+      <view class="weui-cell__ft" hidden='{{confirmPwdInput}}'>
+        <icon type="warn" size="23" color="#E64340"></icon>
+      </view>
+    </view>
+  </view>
+  <view class="weui-cells__title">
+    <navigator url='../wjdlmm/wjdlmm'>
+      <text style='color:#326ED2'>忘记登录密码</text>
+    </navigator>
+  </view>
+  <view class="weui-cells__title">
+    <text>6-20位的数字和字母组合</text>
+  </view>
+  <view class="weui-btn-area">
+    <button class="weui-btn" disabled='{{false}}' type="primary" bindtap="handleSubmit" style='background-color: #f35545;'>提交</button>
+  </view>
+</view>

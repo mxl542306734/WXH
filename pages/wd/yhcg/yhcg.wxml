@@ -1,0 +1,42 @@
+<view>
+  <view class="message">
+    <view class="title">尊敬的用户:</view>
+    <view class='article'>和掌柜
+      <text>已接入银行资金存管，请您立即激活您的存款交易账户。如未激活，将影响您的后续操作。</text>
+    </view>
+  </view>
+  <view class="weui-cells__title">请选择并开通存管的银行卡</view>
+  <view class="weui-cells weui-cells_after-title">
+    <radio-group bindchange="radioChange">
+      <label class="weui-cell weui-check__label" wx:for="{{radioItems}}" wx:key="value">
+        <radio class="weui-check" value="{{item.value}}" checked="{{item.checked}}" />
+
+        <view class="weui-cell__bd">
+          <view class="bCard">
+            <view class="leftView">
+              <image />
+            </view>
+            <view class="midView">
+              <view class="midT">2</view>
+              <view class="midB">
+                <view>
+                  <text>单笔限额: 20000元</text>
+                </view>
+                <view>
+                  <text>单日限额：100000元</text>
+                </view>
+              </view>
+            </view>
+
+          </view>
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{item.checked}}">
+          <icon class="weui-icon-radio" type="success_no_circle" size="16"></icon>
+        </view>
+      </label>
+    </radio-group>
+  </view>
+  <view class="weui-btn-area">
+    <button class="weui-btn" type="primary" style='background-color:#f35545;' bindtap="">下一步</button>
+  </view>
+</view>

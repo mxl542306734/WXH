@@ -1,0 +1,177 @@
+/* pages/lc/lcgm/lcgm.wxss */
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.gm_header {
+  padding-top: 30rpx;
+  background-color: #fff;
+  height: 420rpx;
+  text-align: center;
+}
+
+.gm_rate {
+  font-size: 80rpx;
+  font-weight: bold;
+}
+
+.gm_rate_des {
+  font-size: 26rpx;
+  color: #8e8e8e;
+}
+
+.item_content {
+  height: 130rpx;
+  text-align: center;
+  width: 33%;
+  bottom: 0;
+}
+
+.item_field {
+  width: 100%;
+  bottom: 0;
+}
+
+.fieldsInfo-title {
+  font-size: 26rpx;
+  color: #8e8e8e;
+}
+
+.fieldsInfo-value {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-weight: bold;
+  font-size: 36rpx;
+}
+
+.model-bottom {
+  margin-left: 5%;
+  margin-top: 10rpx;
+  height: 60rpx;
+  width: 90%;
+}
+
+.item_timer image {
+  float: left;
+  width: 28rpx;
+  height: 28rpx;
+  vertical-align: middle;
+  margin-right: 2rpx;
+  margin-top: 8rpx;
+}
+
+.spanTime {
+  float: left;
+  color: #888;
+  font-size: 26rpx;
+}
+
+.item_timer {
+  width: 60%;
+  font-size: 28rpx;
+  color: #8e8e8e;
+}
+
+.item_blance {
+  width: 40%;
+  text-align: right;
+  font-size: 28rpx;
+  color: #8e8e8e;
+}
+
+.sepLine {
+  clear: both;
+  background-color: #bebebe;
+  width: 100%;
+  height: 2rpx;
+  line-height: 0rpx;
+}
+
+.gm_cp_js {
+  height: 370rpx;
+  background-color: #fff;
+  padding: 30rpx;
+}
+
+.cp_js_tm {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.direction-row {
+  flex-direction: row;
+  display: flex;
+}
+
+.cp_js_nr {
+  padding-top: 15rpx;
+}
+
+.cp_js_nr_left {
+  width: 50%;
+  text-align: left;
+  font-size: 28rpx;
+  color: #8e8e8e;
+}
+
+.cp_js_nr_right {
+  width: 50%;
+  text-align: right;
+  font-size: 28rpx;
+  color: #8e8e8e;
+}
+
+.cp_xy {
+  background-color: #fff;
+}
+
+.cp_xy_nr {
+  border-bottom: 2rpx solid #bebebe;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.cp_xy_nr_title {
+  padding-left: 2%;
+  width: 87%;
+}
+
+.cp_xy_nr_icon {
+  width: 13%;
+}
+
+.cp_xy_nr_icon image {
+  vertical-align: middle;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.btn-buy {
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  color: #fff;
+  background-color: #f35545;
+  width: 100%;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 36rpx;
+}
+
+.btn-buy-disable {
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  color: #fff;
+  background-color: #cdcdcd;
+  width: 100%;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 36rpx;
+}
+.pressedColor{
+  background-color: #e84c3c;
+}

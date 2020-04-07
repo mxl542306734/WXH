@@ -1,0 +1,29 @@
+<import src="/common/component/toast/toast.wxml"/>
+<template is="toast" data="{{ ..._toast_ }}"/>
+<view class="page">
+  <view class="login_section_top"></view>
+  <view class="login_section">
+    <view class="login_head_section">
+      <image src="{{login_url}}"></image>
+    </view>
+    <view class="login_main_section">
+        <view>
+          <input placeholder="请输入手机号" type="number" style='border-bottom:{{loginInputBottomStyleUserName}}' bindinput="userNameChange" data-userName="{{userName}}" confirm-type="next"  maxlength="11" auto-focus/>
+        </view>
+        <view>
+          <input placeholder="请输入密码" type="text" style='border-bottom:{{loginInputBottomStylePassWord}}' bindinput="passWordChange" data-userName="{{userName}}" confirm-type="done" maxlength="25" password="true" />
+        </view>
+    </view>
+    <view class="login_button_section">
+      <button type="default" size="default" disabled="{{disabled}}" bindtap="handleLoginButtonClick" hover-class="other-button-hover">登录</button>
+    </view>
+    <view class="login_link_section">
+      <navigator url="../wd/xtsz/wjdlmm/wjdlmm" open-type="navigate" style="float:left;" hover-class="navigator-hover">  
+        <text>忘记密码？</text>
+      </navigator>
+      <navigator url="../zc/zc" open-type="navigate" style="text-align:right;" hover-class="navigator-hover">  
+        <text>手机快速注册</text>
+      </navigator>
+    </view>
+  </view>
+</view>

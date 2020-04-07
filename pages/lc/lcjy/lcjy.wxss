@@ -1,0 +1,207 @@
+/* pages/lc/lcjy/lcjy.wxss */
+
+page {
+  background-color: #ededed;
+  height: 100%;
+  font-size: 32rpx;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.sepLine {
+  clear: both;
+  background-color: #bebebe;
+  width: 100%;
+  height: 2rpx;
+  line-height: 0rpx;
+}
+
+.jjshItem {
+  height: 200rpx;
+  background-color: #fff;
+  padding: 20rpx;
+}
+
+.item-left {
+  width: 40%;
+  height: 100%;
+}
+
+.item-right {
+  width: 58%;
+  height: 100%;
+}
+
+.field-rate {
+  height: 70rpx;
+  font-weight: bold;
+  font-size: 54rpx;
+  color: #ff4239;
+}
+.field-rate label{
+  font-size: 28rpx;
+  color: #ff4239;
+}
+.field-rate-des {
+  font-size: 24rpx;
+  color: #8e8e8e;
+  font-weight: normal;
+}
+
+.lcjy-timer {
+  height: 150rpx;
+}
+
+.lcjy-timer image {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.time-content {
+  padding-left: 6rpx;
+  line-height: 34rpx;
+  font-size: 32rpx;
+}
+
+.lcjy-balance image {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.lcjy-warning {
+  height: 100rpx;
+  line-height: 130rpx;
+  padding-left: 50rpx;
+}
+
+.lcjy-warning-co {
+  padding-top: 50rpx;
+  height: 36rpx;
+  display: flex;
+}
+
+.lcjy-warning image {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.lcjy-warning text {
+  height: 36rpx;
+  font-size: 30rpx;
+  color: #ff4138;
+  line-height: 36rpx;
+  margin-left: 20rpx;
+}
+
+.gm-je {
+  flex-direction: row;
+  display: flex;
+  height: 100rpx;
+  background-color: #fff;
+}
+
+.gm-je label {
+  width: 30%;
+  padding-left: 5%;
+  line-height: 100rpx;
+  font-size: 32rpx;
+}
+
+.gm-je input {
+  width: 70%;
+  height: 100rpx;
+}
+
+.lcjy-yqsy {
+  height: 100rpx;
+  line-height: 100rpx;
+  padding-left: 50rpx;
+  font-size: 32rpx;
+  color: #8e8e8e;
+}
+
+.lcjy-yqsy label {
+  color: #ff4138;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  font-weight: bold;
+}
+
+.gm-ye {
+  flex-direction: row;
+  display: flex;
+  height: 100rpx;
+  background-color: #fff;
+  line-height: 100rpx;
+}
+
+.gm-ye-label {
+  padding-left: 5%;
+  width: 50%;
+}
+
+.gm-ye-label text {
+  color: #ff4138;
+  font-weight: bold;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+}
+
+.gm-ye-btn {
+  color: #1d82ff;
+  width: 20%;
+  text-align: right;
+  padding-right: 3%;
+}
+
+.lcjy-agreement {
+  height: 160rpx;
+  line-height: 160rpx;
+  text-align: center;
+  color: #8e8e8e;
+}
+
+.lcjy-agreement label {
+  color: #1d82ff;
+}
+
+.lcjy-buy-btn-content {
+  width: 80%;
+  text-align: center;
+  padding-left: 10%;
+  height: 200rpx;
+}
+
+.lcjy-buy-btn {
+  background-color: #ff4138;
+}
+
+.lcjy-buy-btn-disabled {
+  background-color: #d5d5d5;
+}
+.gm-ye-warning{
+  width: 30%;
+  height: 36rpx;
+  line-height: 36rpx;
+  display: flex;
+  padding-top: 32rpx;
+}
+.gm-ye-warning image {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.gm-ye-warning text {
+  font-size: 30rpx;
+  color: #ff4138;
+  margin-left: 10rpx;
+}
+.gm-ye-warning-co {
+  flex-direction:row;
+  height: 36rpx;
+  display: flex;
+}

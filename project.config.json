@@ -1,0 +1,84 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.6.4",
+	"appid": "wx06a23dd58a2a8a6c",
+	"projectname": "WXH",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "自定义模式",
+					"pathName": "pages/common/wwllj",
+					"query": "",
+					"scene": "1023"
+				},
+				{
+					"id": -1,
+					"name": "www",
+					"pathName": "pages/wd/xtsz/wjdlmm/wjdlmm",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "xgdlmm",
+					"pathName": "pages/wd/xtsz/xgdlmm/xgdlmm",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "xgjymm",
+					"pathName": "pages/wd/xtsz/xgjymm/xgjymm",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "wjjymm",
+					"pathName": "pages/wd/xtsz/wjjymm/wjjymm",
+					"query": ""
+				},
+				{
+					"id": 5,
+					"name": "dlsub",
+					"pathName": "pages/wd/xtsz/jymm_submit/jymm_submit",
+					"query": ""
+				},
+				{
+					"id": 6,
+					"name": "cz",
+					"pathName": "pages/wd/tx/tx",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "home",
+					"pathName": "pages/lc/home/home",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "gm",
+					"pathName": "pages/lc/lcgm/lcgm",
+					"query": ""
+				}
+			]
+		}
+	}
+}

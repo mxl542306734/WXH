@@ -1,0 +1,16 @@
+<view class="zcqr_section">
+  <view class="zcqr_ts_section">
+    <text>{{zcqr_tsxx}}</text>
+  </view>
+  <!--验证码输入区域-->
+  <view class="zcqr_yzm_section" style="border-bottom:{{zcqryzmdbys}}">
+    <label for="zcqr_yzm" >验证码</label>
+    <input id="zcqr_yzm" type="number" class="zcqr_yzm_input" placeholder='请输入验证码' maxlength="6" placeholder-style='padding:0 0 0 15px;' auto-focus="true" confirm-type="done" bindinput="yzmChange"></input>
+    <button disabled='{{yzm_disabled}}' bindtap='startTick'>{{zcqr_hqyzmts}}</button>
+  </view>
+  <view class="zcqr_qr_section">
+    <view>
+      <button disabled='{{qr_disabled}}' bindtap='zc'>注册</button>
+    </view>
+  </view>
+</view>

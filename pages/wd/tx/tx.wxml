@@ -1,0 +1,60 @@
+
+<import src="/common/component/toast/toast.wxml"/>
+<template is="toast" data="{{ ..._toast_ }}"/>
+<view class='page'>
+<view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-label">账户余额:</view>
+                <view class='weui-cell__bd'><text style='color:#ff4138;padding-right:16rpx;'>{{balance}}</text>元</view>
+            </view>
+        </view>
+  <view class="weui-cells__title">{{bankName}} {{bankNum}}</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">提现金额:</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" id="0" bindinput='handleTxInput' type='digit' value='{{money}}' maxlength='12' placeholder="请输入提现金额" />
+      </view>
+      <view class="weui-cell__ft" hidden='{{money_input}}'>
+        <icon type="warn" size="23" color="#E64340"></icon>
+      </view>
+       <view bindtap='handleAll' class="weui-cell__ft" style='color:#1474be;'>
+        全部
+      </view> 
+    </view>
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">交易密码:</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" id="1" bindinput='handleInput' type='number' maxlength='6' password='{{true}}' placeholder="请输入交易密码" />
+      </view>
+      <view class="weui-cell__ft" hidden='{{passsword_input}}'>
+        <icon type="warn" size="23" color="#E64340"></icon>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input weui-cell_vcode">
+      <view class="weui-cell__hd">
+        <view class="weui-label">验证码:</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" id="2" bindinput='handleInput' type='number' maxlength='6' placeholder="请输入短信验证码" />
+      </view>
+      <view class="weui-cell__ft" hidden='{{code_input}}'>
+        <icon type="warn" size="23" color="#E64340"></icon>
+      </view>
+      <view class="weui-cell__ft">
+        <view class="weui-vcode-btn code" bindtap='{{clicked?"handleCode":""}}'>{{clicked?"获取验证码":countDown+" s"}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="weui-cells__tips" style='margin:10rpx 0;'>1.单笔提现限额100万</view>
+  <view class="weui-cells__tips" style='margin:10rpx 0;'>2.提现到下个工作日到账</view>
+  <view class="weui-cells__tips" style='margin:10rpx 0;'>3.若有疑问请联系客服热线: 400-0200-178</view>  
+  <view class="weui-btn-area">
+    <button class="weui-btn" type="primary" bindtap="handleOK" style='background-color:#f35545;width:80%;font-size:12pt'>确定</button>
+  </view>
+</view>

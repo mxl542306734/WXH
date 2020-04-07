@@ -1,0 +1,85 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/sy/sy",
+    "pages/dl/dl",
+    "pages/lc/home/home",
+    "pages/lc/lcgm/lcgm",
+    "pages/lc/cpms/cpms",
+    "pages/lc/wblj/wblj",
+    "pages/lc/zjgm/zjgm",
+    "pages/lc/lcjy/lcjy",
+    "pages/lc/gmcg/gmcg",
+    "pages/hb/hb",
+    "pages/wd/wd",
+    "pages/wd/wdyhk/wdyhk",
+    "pages/wd/wdlc/wdlc",
+    "pages/wd/wdlc/wdgmxq/wdgmxq",
+    "pages/wd/tx/tx",
+    "pages/wd/cz/cz",
+    "pages/wd/wdmx/wdmx",
+    "pages/wd/wdmx/czjl/czjl",
+    "pages/wd/wdmx/jyjl/jyjl",
+    "pages/wd/wdmx/txjl/txjl",
+    "pages/wd/wdckr/wdckr",
+    "pages/wd/xtsz/xgjymm/xgjymm",
+    "pages/wd/xtsz/wjjymm/wjjymm",
+    "pages/wd/xtsz/xgdlmm/xgdlmm",
+    "pages/wd/xtsz/wjdlmm/wjdlmm",
+    "pages/wd/xtsz/xtsz",
+    "pages/ty/swiper/details",
+    "pages/ty/wwllj/wwllj",
+    "pages/wd/xtsz/dlmm_submit/dlmm_submit",
+    "pages/wd/xtsz/jymm_submit/jymm_submit",
+    "pages/wd/yhcg/yhcg",
+    "pages/zc/zc",
+    "pages/zc/zcqr/zcqr",
+    "pages/wd/khjl/khjl",
+    "pages/wd/wdcj/wdcj"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f35545",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#f35545",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/sy/sy",
+        "iconPath": "images/menu_sy_unselected.png",
+        "selectedIconPath": "images/menu_sy_selected.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/lc/home/home",
+        "iconPath": "images/menu_lc_unselected.png",
+        "selectedIconPath": "images/menu_lc_selected.png",
+        "text": "理财"
+      },
+      {
+        "pagePath": "pages/hb/hb",
+        "iconPath": "images/menu_zq_unselected.png",
+        "selectedIconPath": "images/menu_zq_selected.png",
+        "text": "和宝"
+      },
+      {
+        "pagePath": "pages/wd/wd",
+        "iconPath": "images/menu_wd_unselected.png",
+        "selectedIconPath": "images/menu_wd_selected.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

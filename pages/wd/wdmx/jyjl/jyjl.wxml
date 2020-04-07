@@ -1,0 +1,54 @@
+<!-- 交易记录 -->
+
+<view>
+  <view class='top'>
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <picker mode="date" start="2014-01" value='{{date}}' end="{{endDate}}" fields="month" bindchange="chooseDate">
+          <view class="weui-search-bar__box">
+            <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+            <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" disabled='{{true}}' focus="{{false}}" />
+            <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+              <icon type="clear" size="14"></icon>
+            </view>
+          </view>
+          <!-- </picker>
+
+        <picker  mode="date" start="2014-01" value='{{date}}' end="{{endDate}}" fields="month" bindchange="chooseDate"> -->
+          <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+            <icon class="weui-icon-search" type="search" size="14"></icon>
+            <view class="weui-search-bar__text">搜索</view>
+          </label>
+        </picker>
+
+      </view>
+      <view class="weui-search-bar__cancel-btn cancelBtn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+    </view>
+  </view>
+  <view class='list'>
+    <view class='noData' wx:if="{{noData}}">暂无资金明细记录</view>
+    <view wx:else>
+      <block wx:for="{{recordList}}" wx:key="czjl">
+        <view class="weui-cells__title">{{index}}</view>
+        <block wx:for="{{item}}" wx:key="czjl_item">
+          <view class='weui-cells weui-cells_after-title item'>
+            <view>
+              <view class='item-type'>
+                <text>{{item.type}}</text>
+              </view>
+              <view class='item-title'>
+                <text>{{item.product}}</text>
+              </view>
+              <view class='item-time'>
+                <text>{{item.date}}</text>
+              </view>
+            </view>
+            <view class='item-count'>
+              <text>{{item.flow}}</text>
+            </view>
+          </view>
+        </block>
+      </block>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,25 @@
+<!-- 我的银行卡 -->
+<view class='noCard' wx:if="{{noCard}}">
+  未绑定银行卡
+</view>
+<view wx:else>
+  <block wx:for="{{cardList}}" wx:key="unq">
+    <view class='cardItem' style='background-color:{{item.bgColor}}'>
+      <view class='left'>
+        <view class='cardImg'>
+          <image src='{{item.BANK_ICON}}'></image>
+        </view>
+        <view>
+          <view  style='font-size:13pt;'>{{item.BANK_FNAME}}</view>
+          <view style='font-size:11pt;'>
+            <text>储蓄卡</text>
+          </view>
+        </view>
+      </view>
+      <view class='right'>
+        <text style='padding-right:20rpx;font-size:12pt'>尾号</text>
+        <text style='margin-right:30rpx;font-size:16pt'>{{item.BANK_CARD_NUM}}</text>
+      </view>
+    </view>
+  </block>
+</view>

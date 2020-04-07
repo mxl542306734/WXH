@@ -1,0 +1,100 @@
+<import src="/common/component/toast/toast.wxml"/>
+<template is="toast" data="{{ ..._toast_ }}"/>
+<view>
+  <view style="height:30rpx"></view>
+  <view class="sepLine"></view>
+  <view class="flex-wrp jjshItem" style="flex-direction:row;display:flex;">
+    <view class="flex-item item-left">
+      <view class="flex-wrp" style="flex-direction:column;display:flex;">
+        <view class="flex-item field-rate">{{showRate}}<label>%</label> </view>
+        <view class="flex-item field-rate-des">预期年化收益率</view>
+        <view class="flex-item">
+          <progress percent="{{progress}}" show-info color="#ff4138" stroke-width="2" style="font-size:10rpx;color:#ff4138" />
+        </view>
+        <view class="flex-item field-rate-des">项目进度</view>
+      </view>
+    </view>
+    <view class="flex-item item-right">
+      <view class="flex-wrp" style="flex-direction:column;display:flex;">
+        <view class="flex-item lcjy-timer">
+          <view class="flex-wrp" style="flex-direction:row;display:flex;height:50%">
+            <image src='/images/lc/timer.png' />
+            <view class="time-content">持有期限：{{cyqx}}天</view>
+          </view>
+        </view>
+        <view class="flex-item lcjy-balance">
+          <view class="flex-wrp lcjy-balance-co" style="flex-direction:row;display:flex;height:50%">
+            <image src='/images/lc/money.png' />
+            <view class="time-content">剩余金额：{{leftMoney}}元</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="sepLine"></view>
+
+  <view class="lcjy-warning">
+    <view class='lcjy-warning-co'>
+      <image src="/images/lc/warning.png"></image>
+      <text>{{qtje}}元起投</text>
+    </view>
+  </view>
+
+  <view class="sepLine"></view>
+
+  <view class="flex-wrp gm-je">
+    <label>购买金额</label>
+    <input type="number" placeholder="请输入购买金额" maxlength='11' bindinput="inputgmje" value='{{gmje}}'></input>
+  </view>
+
+  <view class="sepLine"></view>
+
+
+  <view class="lcjy-yqsy">
+    预期收益
+    <label>{{predictIncome}}</label>元
+  </view>
+  <view class="sepLine"></view>
+
+  <view class="flex-wrp gm-ye" style="display:flex">
+    <view class="gm-ye-label">
+      <label>余额：</label>
+      <text>{{balance}}</text>
+      <label>元</label>
+    </view>
+
+    <view class='gm-ye-warning'>
+      <block wx:if="{{isBalanceEnough}}">
+        <image src="/images/lc/warning.png"></image>
+        <text>余额不足</text>
+      </block>
+    </view>
+
+    <view class="gm-ye-btn">
+      <text bindtap='jumpToCharge'>去充值</text>
+    </view>
+  </view>
+
+  <view class="sepLine"></view>
+
+  <view style="height:30rpx"></view>
+
+  <view class="sepLine"></view>
+  <view class="flex-wrp gm-je">
+    <label>交易密码</label>
+    <input type="number" password="true" placeholder="请输入交易密码" maxlength='6' bindinput="inputjymm"></input>
+  </view>
+
+  <view class="sepLine"></view>
+
+  <view class="lcjy-agreement">
+    <checkbox-group bindchange="checkboxChange">
+      <checkbox value="1" />我已阅读并同意
+      <label bindtap="onBtnContract">《产品认购合同》</label>
+    </checkbox-group>
+  </view>
+  <view class="lcjy-buy-btn-content">
+    <button type="primary" wx:if="{{buyBtnDisable}}" style='background-color: #d5d5d5;' disabled='true'> 确定 </button>
+    <button type="primary" wx:else style='background-color: #f35545;' bindtap='buyOnclick'> 确定 </button>
+  </view>
+</view>

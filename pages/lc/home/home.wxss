@@ -1,0 +1,144 @@
+/* pages/lc/home/home.wxss */
+
+.page-body-info {
+  background-color: transparent;
+}
+
+.btn-area {
+  margin-top: 300rpx;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.sepline {
+  clear: both;
+  background-color: #bebebe;
+  width: 100%;
+  height: 2rpx;
+  line-height: 0rpx;
+}
+
+.investProduct {
+  background-color: #fff;
+}
+
+.model-title {
+  height: 100rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 36rpx;
+  font-weight: bold;
+  line-height: 100rpx;
+  vertical-align: middle;
+}
+
+.model-middle {
+  padding-bottom: 10rpx;
+}
+
+.left {
+  width: 78%;
+  margin-left: 20rpx;
+  z-index: 0;
+}
+
+.right {
+  width: 22%;
+  text-align: center;
+}
+
+.item_content {
+  height: 130rpx;
+  text-align: center;
+  width: 33%;
+  bottom: 0;
+}
+
+.item_field {
+  width: 100%;
+  bottom: 0;
+}
+
+.fieldsInfo-title {
+  font-size: 28rpx;
+}
+
+.fieldsInfo-value {
+  height: 80rpx;
+  line-height: 100rpx;
+  font-weight: bold;
+  font-size: 36rpx;
+}
+.fieldsInfo-value label{
+  font-size: 28rpx;
+  font-weight: normal;
+}
+
+.fieldsInfo-rate {
+  height: 80rpx;
+  font-weight: bold;
+  font-size: 54rpx;
+  color: #ff4239;
+}
+.fieldsInfo-rate label{
+  font-size: 28rpx;
+}
+
+.buyBtn {
+  width: 90rpx;
+  height: 60rpx;
+  color: #fff;
+  font-size: 26rpx;
+  line-height: 60rpx;
+  padding: 0;
+}
+
+.soldOutBtn {
+  width: 90rpx;
+  height: 60rpx;
+  background: #cdcdcd;
+  font-size: 26rpx;
+  line-height: 60rpx;
+  color: #fff;
+  outline: 0;
+  padding: 0;
+}
+
+.model-bottom {
+  margin-left: 24rpx;
+  margin-right: 24rpx;
+  margin-top: 6rpx;
+  height: 60rpx;
+}
+
+image {
+  float: left;
+  width: 28rpx;
+  height: 28rpx;
+  vertical-align: middle;
+  margin-right: 2rpx;
+  margin-top: 8rpx;
+}
+
+.spanTime {
+  float: left;
+  color: #888;
+  font-size: 26rpx;
+}
+
+.item_timer {
+  width:60%;
+  font-size: 26rpx;
+}
+
+.item_blance {
+  width:40%;
+  text-align: right;
+  font-size: 26rpx;
+}

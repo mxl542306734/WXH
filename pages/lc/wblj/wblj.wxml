@@ -1,0 +1,2 @@
+<!--pages/lc/wblj/wblj.wxml-->
+<web-view src="{{jump_url}}#wechat_redirect" wx:if="{{jump_url}}"></web-view>

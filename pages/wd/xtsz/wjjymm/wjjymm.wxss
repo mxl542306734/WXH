@@ -1,0 +1,4 @@
+/* pages/wd/xtsz/xgjymm/wjjymm/wjjymm.wxss */
+.weui-label{
+  width: 180rpx;
+}

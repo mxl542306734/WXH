@@ -1,0 +1,29 @@
+<!--pages/lc/gmcg/gmcg.wxml-->
+<view>
+  <view class="gmcg">
+    <view class="success-tip" style="display:flex">
+      <image src="/images/lc/btn_msg_checked_1.svg"></image>
+      <label>订单提交成功</label>
+    </view>
+  </view>
+
+  <view class="flex-wrp" style="flex-direction:column;">
+    <view class="flex-item field-item" style="flex-direction:row;display:flex">
+      <view class="item-title">购买金额</view>
+      <view class="item-value">{{gmje}}元</view>
+    </view>
+    <view class="flex-item field-item" style="flex-direction:row;display:flex">
+      <view class="item-title">预期收益</view>
+      <view class="item-value">{{yqsy}}元</view>
+    </view>
+    <view class="flex-item field-item" style="flex-direction:row;display:flex">
+      <view class="item-title">预期兑付</view>
+      <view class="item-value">{{yqdf}}元</view>
+    </view>
+  </view>
+
+  <view class="gmcg-btn">
+    <button type='primary' style='background-color:#f35545;width:40%;' bindtap='onBtnBack'>返回产品</button>
+    <button type='primary' style='background-color:#fa931a;width:40%;' bindtap='onDetailBtn'>购买详情</button>
+  </view>
+</view>

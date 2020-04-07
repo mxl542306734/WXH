@@ -1,0 +1,10 @@
+<!--pages/lc/zjgm/zjgm.wxml-->
+<view class="content">
+  <block wx:for="{{infoList}}" wx:key="unique" wx:for-item="item">
+    <view class="flex-wrp order" style="flex-direction:row;display:flex;">
+      <label>{{item.userRecord}}</label>
+      <text>{{item.dateStr}}</text>
+    </view>
+    <view class="sepline"></view>
+  </block>
+</view>

@@ -1,0 +1,90 @@
+<!-- 我的银行卡 -->
+<view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">姓名</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" placeholder="请输入姓名" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">身份证号</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" type='idcard' placeholder="请输入身份证号" />
+      </view>
+    </view>
+  </view>
+  <view class="weui-cells__title">绑定银行卡</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell  weui-cell_select">
+      <view class="weui-cell__hd weui-cell__hd_in-select-after">
+        <view class="weui-label">银行</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker bindchange="selectBankCard" data-bankcode='{{bank_code}}' value="{{bank_list}}" range="{{bank_list}}" range-key='BANK_FNAME'>
+          <view class="weui-select">{{bank_name}}</view>
+        </picker>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">卡号</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" type='number' placeholder="请输入储蓄卡卡号" />
+      </view>
+    </view>
+    <view class="weui-cell  weui-cell_select">
+      <view class="weui-cell__hd weui-cell__hd_in-select-after">
+        <view class="weui-label">开户省份</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker bindchange="selectProvince" data-ssdm='{{province_code}}' value="{{province_list}}" range="{{province_list}}" range-key='SSMC'>
+          <view class="weui-select">{{province_name}}</view>
+        </picker>
+      </view>
+    </view>
+    <view class="weui-cell  weui-cell_select">
+      <view class="weui-cell__hd weui-cell__hd_in-select-after">
+        <view class="weui-label">开户城市</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker bindchange="selectCity" data-dqdm='{{city_code}}' value="{{city_list}}" range="{{city_list}}" range-key='DQMC'>
+          <view class="weui-select">{{city_name}}</view>
+        </picker>
+      </view>
+    </view>
+  </view>
+  <view class="weui-cells__title">恒丰提现支付密码</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">交易密码</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input type='password' maxlength='6' class="weui-input" placeholder="设置6位数字交易密码" />
+      </view>
+    </view>
+  </view>
+  <checkbox-group bindchange="bindAgreeChange">
+    <label class="weui-agree" for="weuiAgree">
+      <view class="weui-agree__text">
+        <checkbox class="weui-agree__checkbox" id="weuiAgree" value="agree" checked="{{isAgree}}" />
+        <view class="weui-agree__checkbox-icon">
+          <icon class="weui-agree__checkbox-icon-check" type="success_no_circle" size="9" wx:if="{{isAgree}}"></icon>
+        </view>
+        <navigator url="" class="weui-agree__link">《网贷客户交易结算资金账户三方协议》</navigator>
+        <view style='padding-left:36rpx'>
+          <navigator url="" class="weui-agree__link">《用户授权协议》</navigator>
+        </view>
+      </view>
+    </label>
+  </checkbox-group>
+  <view class="weui-btn-area">
+    <button class="weui-btn" type="primary" style='background-color:#f35545;' bindtap="">确定</button>
+  </view>
+</view>

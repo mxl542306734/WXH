@@ -1,0 +1,2 @@
+/* pages/lc/cpxy/cpxy.wxss */
+@import "../../../common/plugins/wxParse/wxParse.wxss";

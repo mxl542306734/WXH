@@ -1,0 +1,107 @@
+.tx_bankTitle{
+  font-size:13px;
+  margin-top:5px;
+  padding:20px 0 10px 4%;
+  color:#8d8d8d;
+}
+.tx_main_section{
+  background-color:#fff;
+  font-size:14px;
+}
+.tx_main_section view{
+  border-bottom:1px solid #bebebe;
+  padding:0 0 0 4%;
+  height:50px;
+}
+.tx_txje_section label{
+  display:inline-block;
+  overflow: hidden;
+  height: 50px;
+  line-height: 50px;
+}
+.tx_txje_section input{
+  display:inline-block;
+  overflow: hidden;
+  height: 50px;
+  line-height: 50px;
+  padding:0 15px;
+  width:60%;
+}
+.tx_txje_section text{
+  display:inline-block;
+  overflow: hidden;
+  height: 50px;
+  line-height: 50px;
+}
+.tx_jymm_section label{
+  display:inline-block;
+  overflow: hidden;
+  height: 50px;
+  line-height: 50px;
+}
+.tx_jymm_section input{
+  display:inline-block;
+  overflow: hidden;
+  height: 50px;
+  line-height: 50px;
+  padding:0 15px;
+}
+.tx_yzm_section label{
+  display:inline-block;
+  overflow: hidden;
+  height: 50px;
+  line-height: 50px;
+}
+.tx_yzm_section input{
+  display:inline-block;
+  overflow: hidden;
+  height: 50px;
+  line-height: 50px;
+  padding:0 15px;
+}
+.tx_yzm_section button{
+    text-align: center;
+    overflow: hidden;
+    float: right;
+    height: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+    background-color: #f35545;
+    font-size: 30rpx;
+    outline: 0;
+    margin:0;
+    border-radius: 0 !important;
+}
+.tx_txsm_section{
+  font-size:13px;
+  margin-top:5px;
+  padding:20px 0 10px 4%;
+  color:#8d8d8d;
+}
+.tx_qr_section{
+    margin: 10px auto;
+    width: 80%;
+}
+.tx_qr_section button{
+    font-size:14px;
+}
+.weui-cells{
+  font-size: 13pt !important;
+}
+.weui-label{
+  width: 190rpx;
+}
+.code{
+  width: 200rpx;
+  height: 100%;
+  text-align: center;
+  background-color: #f35545;
+  color:white;
+  font-size: 12pt;
+}
+.code:active{
+  color: white;
+}
+.code:disabled{
+  background-color: orange;
+}

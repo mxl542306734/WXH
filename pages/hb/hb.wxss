@@ -1,0 +1,113 @@
+@import"/pages/lc/home/home.wxss";
+.qhhbm_section {
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+}
+
+.qhhbm_main_section {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #fff;
+  text-align: center;
+  font-size: 30rpx;
+  border-top: solid #bebebe 2rpx;
+}
+
+.qhhbm_main_section text {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.hb_backDrop_section {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  z-index: 1;
+  background-color: #000;
+  opacity: 0.3;
+  overflow: hidden;
+}
+
+.hb_hbmsy_section {
+  display:flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  position: fixed;
+}
+
+.hb_hbmsy_main {
+  border-radius: 8rpx;
+  background-color: #fff;
+  padding-top: 40rpx;
+}
+
+.hb_syhbm_input {
+  height: 120rpx;
+  text-align: center;
+}
+
+.hb_syhbm_input input {
+  width: 480rpx;
+  height: 90rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  padding-left: 15rpx;
+  border: 2rpx solid #b9b9b9;
+}
+.hb_syhbm_button{
+  height: 100rpx;
+}
+.hb_syhbm_button .disabled_button {
+  padding: 8px 0;
+  border: 0;
+  font-size: 15px;
+  border-radius: 0;
+}
+
+.hb_syhbm_button .enabled_button {
+  border: 0;
+  background-color: #ff4138;
+  color: #fff;
+  font-size: 15px;
+  padding: 8px 0;
+  border-radius: 0;
+}
+
+.hb-input {
+  height: 100rpx;
+  width: 90%;
+  border: 1rpx solid #ccc;
+  font-size: 30rpx;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.btn-buy {
+  height: 100rpx;
+  color: #fff;
+  background-color: #f35545;
+  width: 100%;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 36rpx;
+}
+
+.btn-buy-disable {
+  height: 100rpx;
+  color: #fff;
+  background-color: #cdcdcd;
+  width: 100%;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 36rpx;
+}
+.pressedColor{
+  background-color: #e84c3c;
+}

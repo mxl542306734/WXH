@@ -1,0 +1,14 @@
+<view class="page">
+  <view class="mywl_section">
+      <view class="mywl_img_section">
+        <image src="../../../images/ty/wwllj/wwllj.svg"></image>
+      </view>
+      <view class="mywl_sm_section">
+        <text style="display:block;font-size:15px;font-weight:bold;">网络竟然崩溃了</text>
+        <text>别紧张，试试看刷新页面~~~</text>
+      </view>
+      <view class="mywl_sxan_section">
+        <button type="default" size="mini" bindtap='refreshNetWork'>刷新</button>
+      </view>
+  </view>
+</view>

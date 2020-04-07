@@ -1,0 +1,53 @@
+/* pages/lc/gmcg/gmcg.wxss */
+
+.gmcg {
+  height: 320rpx;
+  width: 100%;
+  background-color: #f35545;
+  text-align: center;
+}
+
+.success-tip {
+  height: 360rpx;
+  color: #fff;
+  font-size: 48rpx;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-tip image {
+  width: 96rpx;
+  height: 96rpx;
+}
+
+.success-tip label {
+  line-height: 96rpx;
+}
+
+.field-item {
+  height: 80rpx;
+  border-bottom: 2rpx solid #bebebe;
+}
+
+.item-title {
+  width: 40%;
+  padding-left: 5%;
+  line-height: 80rpx;
+}
+
+.item-value {
+  width: 60%;
+  line-height: 80rpx;
+}
+
+.gmcg-btn {
+  height: 120rpx;
+  flex-direction: row;
+  display: flex;
+  margin-top: 80rpx;
+}
+.gmcg-btn button{
+  justify-content: center;
+  align-content: center;
+  font-size: 32rpx;
+}

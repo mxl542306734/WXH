@@ -1,0 +1,16 @@
+.weui-label{
+  width: 190rpx;
+}
+.code{
+  width: 200rpx;
+  height: 100%;
+  text-align: center;
+  background-color: #f35545;
+  color:white;
+}
+.code:active{
+  color: white;
+}
+.code:disabled{
+  background-color: orange;
+}

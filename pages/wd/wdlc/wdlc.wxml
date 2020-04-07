@@ -1,0 +1,137 @@
+<!-- 我的理财 -->
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-tab">
+      <view class="weui-navbar" style='position:fixed;background-color:white;'>
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}} navbar" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel">
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+          <block wx:for="{{holdData}}" wx:key="{{index}}">
+            <view bindtap='handleItemClick' id="{{index}}">
+              <view class='item'>
+                <view class='item_top'>
+                  <view>
+                    <text style='color:#353535;'>{{item.productName}}</text>
+                  </view>
+                  <view>
+                    <text style='color:#1d82ff;'>{{item.statusMsg}}</text>
+                  </view>
+                </view>
+                <view class='item_mid'>
+                  <view>
+                    <view class='count' wx:if="{{item.yjsy>=0}}">
+                      <text style='color: #ff4138;'>+{{item.yjsy}}</text>
+                    </view>
+                    <view class='count' wx:else>
+                      <text style='color: #009900;'>-{{item.yjsy}}</text>
+                    </view>
+                    <view class='describe'>
+                      <text>预期收益(元)</text>
+                    </view>
+                  </view>
+                  <view>
+                    <view class='count'>
+                      <text>{{item.money}}</text>
+                    </view>
+                    <view class='describe'>
+                      <text>持有金额(元)</text>
+                    </view>
+                  </view>
+                  <view>
+                    <view class='count'>
+                      <text>{{item.yearRate}}%</text>
+                    </view>
+                    <view class='describe'>
+                      <text>预期年化收益率</text>
+                    </view>
+                  </view>
+                </view>
+                <view class='item_bot'>
+                  <view> 项目期限:
+                    <text>{{item.timeLimit}} {{item.timeUnit}}</text>
+                  </view>
+                  <view> 预期兑付日:
+                    <text>{{item.expire}}</text>
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class='sepline'></view>
+          </block>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+           <block wx:for="{{finishedData}}" wx:key="{{item.key}}">
+            <view bindtap='handleItem' id='{{index}}'>
+              <view class='item'>
+                <view class='item_top'>
+                  <view>
+                    <text style='color:#353535;'>{{item.productName}}</text>
+                  </view>
+                  <view>
+                    <text style='color:#1d82ff;'>{{item.statusMsg}}</text>
+                  </view>
+                </view>
+                <view class='item_mid'>
+                  <view>
+                    <view class='count' wx:if="{{item.yjsy>=0}}">
+                      <text style='color: #ff4138;'>+{{item.yjsy}}</text>
+                    </view>
+                    <view class='count' wx:else>
+                      <text style='color: #009900;'>-{{item.yjsy}}</text>
+                    </view>
+                    <view class='describe'>
+                      <text>预期收益(元)</text>
+                    </view>
+                  </view>
+                  <view>
+                    <view class='count'>
+                      <text>{{item.money}}</text>
+                    </view>
+                    <view class='describe'>
+                      <text>持有金额(元)</text>
+                    </view>
+                  </view>
+                  <view>
+                    <view class='count'>
+                      <text>{{item.yearRate}}%</text>
+                    </view>
+                    <view class='describe'>
+                      <text>预期年化收益率</text>
+                    </view>
+                  </view>
+                </view>
+                <view class='item_bot'>
+                  <view> 项目期限:
+                    <text>{{item.timeLimit}} {{item.timeUnit}}</text>
+                  </view>
+                  <view> 预期兑付日:
+                    <text>{{item.expire}}</text>
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class='sepline'></view>
+          </block>
+        </view>
+
+      </view>
+    </view>
+  </view>
+   <view class="page__bd" hidden='{{loading}}'>
+    <view class="weui-loadmore" >
+      <view class="weui-loading"></view>
+      <view class="weui-loadmore__tips">正在加载</view>
+    </view>
+  </view> 
+  <view class="page__bd" hidden='{{noData}}'>
+    <view class="weui-loadmore weui-loadmore_line">
+      <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+    </view>
+  </view> 
+</view>

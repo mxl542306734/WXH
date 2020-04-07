@@ -1,0 +1,106 @@
+<import src="/common/component/toast/toast.wxml"/>
+<template is="toast" data="{{ ..._toast_ }}"/>
+<view class="section" hidden="{{!hidden}}">
+  <view scroll-y="true" style="height: 100%;">
+  
+    <view wx:for="{{responseData}}" wx:key="key" wx:for-item="product" class="scroll-view-item" bindtap="buyDetail" data-product="{{product}}" >
+      <view class="investProduct">
+        <view class="model-title">
+          {{product.title}}
+        </view>
+        <view class="section model-middle" style="text-align: center;">
+          <view class="flex-wrp" style="flex-direction:row;display:flex;">
+
+            <view class="flex-item left">
+              <view class="section">
+                <view class="flex-wrp" style="flex-direction:row;display:flex;with:80%;">
+
+                  <view class="flex-item item_content">
+                    <view class="item_field">
+                      <view class="fieldsInfo-rate">
+                        {{product.values[0]}}<label>%</label>
+                      </view>
+                      <view class="fieldsInfo-title des-font-color">
+                        预期年化
+                      </view>
+                    </view>
+                  </view>
+
+                  <view class="flex-item item_content">
+                    <view class="item_field">
+                      <view class="fieldsInfo-value">
+                        {{product.values[1]}}<label class="des-font-color">天</label>
+                      </view>
+                      <view class="fieldsInfo-title des-font-color">
+                        持有期限
+                      </view>
+                    </view>
+                  </view>
+
+                  <view class="flex-item item_content">
+                    <view class="item_field">
+                      <view class="fieldsInfo-value">
+                        {{product.values[2]}}<label class="des-font-color">元</label>
+                      </view>
+                      <view class="fieldsInfo-title des-font-color">
+                        起投金额
+                      </view>
+                    </view>
+                  </view>
+
+                </view>
+              </view>
+
+            </view>
+            <view class="flex-item right">
+              <button wx:if="{{product.status=='0'||product.status=='1'}}" class="buyBtn btn-color">{{product.buyBtnName}}</button>
+              <button wx:else class="soldOutBtn">{{product.buyBtnName}}</button>
+            </view>
+          </view>
+          <view style="width:96%;margin-left:2%;">
+            <progress percent="{{product.progress}}" color="#ff4138" stroke-width="3" />
+          </view>
+        </view>
+        <view class="flex-wrp model-bottom" style="flex-direction:row;display:flex;">
+          <view class="flex-item">
+            <image src="https://m.139lc.com/img/icon_time.svg" />
+          </view>
+          <view class="flex-item item_timer des-font-color"><text>{{product.timerText}}{{product.timerStr}}</text></view>
+          <view class="flex-item item_blance des-font-color"><text>{{product.moneyStr}}</text></view>
+        </view>
+      </view>
+
+      <view class="sepline"></view>
+    </view>
+  </view>
+  <view style="height:102rpx;"></view>
+</view>
+
+<view class="qhhbm_section" bindtap='changeHeCode'>
+  <view class="qhhbm_main_section">
+     <view class="weui-cell__bd">切换其他宝码<text>  ></text></view>
+  </view>
+</view>
+ <!-- <modal hidden="{{hidden}}" no-cancel confirm-color="red" bindconfirm="showProduct">
+  <input placeholder="请输入你的产品宝码" class="hb-input" />
+</modal>  -->
+<view hidden="{{hidden}}" class="hb_backDrop_section"></view>
+<view hidden="{{hidden}}" class="hb_hbmsy_section">
+   <view class="hb_hbmsy_main">
+      <view class="hb_syhbm_input">
+        <input placeholder="请输入你的产品宝码" type="number" bindinput="handleInputChange" confirm-type="done" maxlength="8" placeholder-style='font-size:12px;'/>
+      </view>
+      <view class="hb_syhbm_button">
+        <block wx:if="{{hasHbm}}">
+          <view class="btn-buy" hover-class="pressedColor" bindtap="showProduct">
+            确定
+          </view>
+        </block>
+        <block wx:else>
+          <view class="btn-buy-disable">
+            确定
+          </view>
+        </block>
+      </view>
+   </view>
+</view>   

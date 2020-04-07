@@ -1,0 +1,85 @@
+<!-- <view class="page">
+  <view class="cz_section">
+    <view class="cz_bankTitle">中国建设银行(5298)</view>
+    <view class="cz_czje_section">
+      <label for="czje" class="cz_czje_lable">充值金额:</label>
+      <input type="digit" id="czje" placeholder='≥1000' maxlength="7" auto-focus confirm-type="next"/>
+      <label class="cz_czje_lable2">元</label>
+    </view>
+    <view class="cz_czxe_setion">
+      <text>单笔限额5万,单日限额10万,单月限额50万</text>
+    </view>
+    <view class="cz_main_section">
+      <view class="cz_jymm_section">
+        <label for="jymm" class="cz_jymm_lable">交易密码:</label>
+        <input type="digit" id="jymm" placeholder='请输入交易密码' maxlength="6" password="true" confirm-type="next"/>
+      </view>
+      <view class="cz_yzm_section">
+        <label for="yzm" class="cz_yzm_lable">验 证 码:</label>
+        <input type="digit" id="yzm" placeholder='请输入验证码' maxlength="6" confirm-type="done"/>
+        <button disabled="true" type="default">获取验证码</button>
+      </view>
+    </view>
+    <view class="cz_button_section">
+      <button type="default" size="24px" disabled="{{true}}" bindtap="handleCode" hover-class="other-button-hover">确定</button>
+    </view>
+  </view>
+</view> -->
+<import src="/common/component/toast/toast.wxml"/>
+<template is="toast" data="{{ ..._toast_ }}"/>
+<view class='page'>
+  <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-label">账户余额:</view>
+                <view class='weui-cell__bd'><text style='color:#ff4138;padding-right:16rpx;'>{{balance}}</text>元</view>
+            </view>
+        </view>
+  <view class="weui-cells__title">{{bankName}} {{bankNum}}</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">充值金额:</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" id="0" bindinput='handleInput' type='digit' maxlength='18' placeholder="≥1000" />
+      </view>
+      <view class="weui-cell__ft" style='margin-right:24rpx;' hidden='{{money_input}}'>
+        <icon type="warn" size="23" color="#E64340"></icon>
+      </view>
+      <view class="weui-cell__ft">
+        元
+      </view>
+    </view>
+  </view>
+  <view class="weui-cells__tips" style='margin:16rpx 0;'>单笔限额：{{single}}万  单日限额：{{dayLimit}}万</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">交易密码:</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" id="1" bindinput='handleInput' type='number' maxlength='6' password='{{true}}' placeholder="请输入交易密码" />
+      </view>
+      <view class="weui-cell__ft" hidden='{{passsword_input}}'>
+        <icon type="warn" size="23" color="#E64340"></icon>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input weui-cell_vcode">
+      <view class="weui-cell__hd">
+        <view class="weui-label">验证码:</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" id="2" bindinput='handleInput' type='number' maxlength='6' placeholder="请输入短信验证码" />
+      </view>
+      <view class="weui-cell__ft" hidden='{{code_input}}'>
+        <icon type="warn" size="23" color="#E64340"></icon>
+      </view>
+      <view class="weui-cell__ft">
+        <view class="weui-vcode-btn code" bindtap='{{clicked?"handleCode":""}}'>{{clicked?"获取验证码":countDown +" s"}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="weui-btn-area">
+    <button class="weui-btn" type="primary" bindtap="handleOK" style='background-color:#f35545;width:80%;font-size:12pt'>确定</button>
+  </view>
+</view>

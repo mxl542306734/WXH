@@ -1,0 +1,112 @@
+<import src="/common/component/toast/toast.wxml"/>
+<template is="toast" data="{{ ..._toast_ }}"/>
+<view style="background-color:#ededed;height:100%;display:{{bodyDisplay}}">
+  <view class="gm_header">
+    <view class="gm_rate price-font-color">
+      <text>{{rate}}</text><label style="font-size:28rpx;">%</label>
+    </view>
+    <view class="gm_rate_des">
+      <text>预期年化收益率</text>
+    </view>
+
+    <view class="section" style="padding-top:50rpx;">
+      <view class="flex-wrp" style="flex-direction:row;display:flex;height:130rpx;with:80%;">
+        <view class="flex-item item_content">
+          <view class="item_field">
+            <view class="fieldsInfo-value">
+              {{cyqx}}<label class="fieldsInfo-title">天</label>
+            </view>
+            <view class="fieldsInfo-title">
+              持有期限
+            </view>
+          </view>
+        </view>
+
+        <view class="flex-item item_content">
+          <view class="item_field">
+            <view class="fieldsInfo-value">
+              {{qtje}}<label class="fieldsInfo-title">天</label>
+            </view>
+            <view class="fieldsInfo-title">
+              起投金额
+            </view>
+          </view>
+        </view>
+
+        <view class="flex-item item_content">
+          <view class="item_field">
+            <view class="fieldsInfo-value">
+              {{totalNumStr}}<label class="fieldsInfo-title">{{totalNumDesc}}</label>
+            </view>
+            <view class="fieldsInfo-title">
+              产品额度
+            </view>
+          </view>
+        </view>
+
+      </view>
+    </view>
+
+    <view style="width:90%;margin-left:5%;">
+      <progress percent="{{progress}}" color="#ff4138" stroke-width="3" />
+    </view>
+
+    <view class="flex-wrp model-bottom direction-row">
+      <view class="flex-item item_timer">
+        <image src="/images/lc/icon_time.svg" />
+        <view class="spanTime">
+          <text>{{timerText}}{{timeStr}}</text>
+        </view>
+      </view>
+      <view class="flex-item item_blance">
+        <text>{{moneyStr}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="sepLine"></view>
+  <view style="height:30rpx;"></view>
+  <view class="sepLine"></view>
+  <view class="gm_cp_js">
+    <view class="cp_js_tm">产品简介</view>
+    <view class="sepLine" style="margin-top:30rpx;"></view>
+    <view class="cp_js_nr direction-row">
+      <view class="flex-item cp_js_nr_left">单笔限额</view>
+      <view class="flex-item cp_js_nr_right">{{maxLimitMoney}}元</view>
+    </view>
+    <view class="cp_js_nr direction-row">
+      <view class="flex-item cp_js_nr_left">递增金额</view>
+      <view class="flex-item cp_js_nr_right">{{buyIncrement}}元</view>
+    </view>
+    <view class="cp_js_nr direction-row">
+      <view class="flex-item cp_js_nr_left">计息开始日</view>
+      <view class="flex-item cp_js_nr_right">{{interestStartDay}}</view>
+    </view>
+    <view class="cp_js_nr direction-row">
+      <view class="flex-item cp_js_nr_left">计息结束日</view>
+      <view class="flex-item cp_js_nr_right">{{interestDay}}</view>
+    </view>
+    <view class="cp_js_nr direction-row">
+      <view class="flex-item cp_js_nr_left">预期兑付日</view>
+      <view class="flex-item cp_js_nr_right">{{expire}}</view>
+    </view>
+  </view>
+  <view class="sepLine"></view>
+  
+  <view style="height:30rpx;"></view>
+
+  <view class="sepLine"></view>
+
+  <view class="cp_xy">
+    <view class="cp_xy_nr direction-row" wx:for="{{detailList}}" wx:key="unique" wx:for-item="detail" data-detail="{{detail}}" bindtap="jumpDetail">
+      <view class="flex-item cp_xy_nr_title">{{detail.DETAIL_TITLE}}</view>
+      <view class="flex-item cp_xy_nr_icon"><image src="/images/lc/btn_right.svg" /></view>
+    </view>
+  </view>
+
+  <view style="height:102rpx;"></view>
+  <view class="{{btnClass}}" hover-class="pressedColor" bindtap="{{onBuyCallback}}">
+    {{btnName}}
+  </view>
+
+
+</view>

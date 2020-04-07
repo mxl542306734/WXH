@@ -1,0 +1,40 @@
+<template name="item">
+<view class="gmxq">
+  <view class='gmxq-title'>
+    <text>{{productName}}</text>
+  </view>
+  <view class='gmxq-yqdf'>
+    <text>预期兑付(元)</text>
+  </view>
+  <view class='gmxq-content'>
+    <view class='yqdf-value'>
+      <text>{{yqdf}}</text>
+    </view>
+    <view class='yqdf-status'>
+      <text>{{statusMsg}}</text>
+    </view>
+  </view>
+</view>
+<view class='borderLine'></view>
+<view class='sepline'></view>
+<view class='borderLine'></view>
+<view class='gmxq'>
+ <view class='detailItem'>
+   <text class='detailItem-title'>购买金额:</text> <text>{{money}}元</text>
+ </view>
+  <view class='detailItem'>
+   <text class='detailItem-title'>购买日期:</text> <text>{{occurrenceTime}}</text>
+ </view>
+  <view class='detailItem'>
+   <text class='detailItem-title'>项目期限:</text> <text>{{timeLimit}}{{timeUnit}}</text>
+ </view>
+  <view class='detailItem'>
+   <text class='detailItem-title'>预期年化收益:</text> <text>{{yearRate}}%</text>
+ </view>
+  <view class='detailItem'>
+   <text class='detailItem-title'>预期收益:</text> <text>{{yjsy}}元</text>
+ </view>
+</view>
+</template>
+<template is="item" data="{{...item}}"></template>
+<view class='borderLine'></view>

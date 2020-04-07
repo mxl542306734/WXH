@@ -1,0 +1,34 @@
+.page{
+  background-color:#fff;
+  height:100%;
+}
+.mywl_section{
+  width:100%;
+  top:35%;
+  position:absolute;
+}
+.mywl_img_section{
+  width: 100%;
+  height:150rpx;
+}
+.mywl_img_section image{
+    margin: 0 auto;
+    height: 150rpx;
+    width: 150rpx;
+    position: absolute;
+    margin-left: -38px;  
+    left:50%;
+    border-radius: 50%;
+}
+.mywl_sm_section{
+  width: 100%;
+  margin-top:25rpx;
+  text-align: center;
+  font-size:13px;
+  height:60rpx;
+}
+.mywl_sxan_section{
+  width: 100%;
+  margin-top:25rpx;
+  text-align: center;
+}

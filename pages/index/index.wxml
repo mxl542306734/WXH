@@ -1,0 +1,15 @@
+<import src="/common/component/toast/toast.wxml"/>
+<template is="toast" data="{{ ..._toast_ }}"/>
+<view class="page">
+  <view class="sy_img_section">
+    <image src="http://huodong.139lc.com/ps//adv/1503657877255.jpg"></image>
+  </view>
+  <view class="sy_an_section">
+    <!-- <view class="sy_an_wxsq" bindtap='wxLoginClick'>
+        <view style="background:url('/images/sy/sy_wx_button.png') no-repeat center center;background-size:90%;"></view>
+        <text>微信用户快速登录</text>
+    </view> -->
+    <button class="sy_an_wxsq" style="background-size:100rpx;background-position:14% center;background-repeat:no-repeat;background-origin:padding-box;background-image:url('/images/sy/sy_wx_button.png');" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">微信用户快速登录</button>
+    <navigator url="/pages/dl/dl" open-type="navigate" hover-class=""><text>输入手机号码登录/注册</text></navigator>
+  </view>
+</view>

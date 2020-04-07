@@ -1,0 +1,72 @@
+/* 充值记录*/
+
+.item {
+  padding: 30rpx;
+  /* height: 152rpx; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-type {
+  font-size: 12pt;
+  padding: 10rpx 0rpx 4rpx;
+  color: #353535;
+}
+
+.item-title {
+  font-size: 12pt;
+  padding-bottom: 4rpx;
+  color: #353535;
+  margin-top: 8rpx;
+}
+
+.item-time {
+  font-size: 10pt;
+  color: #8e8e8e;
+  margin-top: 8rpx;
+}
+
+.item-count {
+  font-size: 14pt;
+  color: #ff4239;
+}
+
+.sepline {
+  width: 100%;
+  height: 2rpx;
+  background-color: #bebebe;
+}
+.noData{
+  width: 100%;
+  height: 120rpx;
+  text-align: center;
+  line-height: 120rpx;
+  background-color: white;
+  font-size: 12pt;
+}
+.searchbar-result{
+    margin-top: 0;
+    font-size: 14px;
+}
+.searchbar-result:before{
+    display: none;
+}
+.weui-cell{
+    padding: 12px 15px 12px 35px;
+}
+.top{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 102rpx;
+  z-index: 2;
+}
+.list{
+  padding: 103rpx 0 10rpx;
+  width: 100%;
+}
+.cancelBtn{
+  /* background-color: #f35545; */
+  color: #f35545;
+}
